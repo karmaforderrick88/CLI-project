@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email us</title>
+    <link rel="stylesheet" href="contact.css">
+    <script src="https://kit.fontawesome.com/4822a6e79c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main id="form-body">
+        <form id="contact-form">
+            <label for="name">Enter your name:</label>
+            <input name="name" class="form-input">
+            <label for="email">Enter your email:</label>
+            <input type="email" class="form-input" name="email">
+            <textarea id="txtarea" name="message" rows="6" placeholder="Your message"></textarea>
+            <button id="submitbtn" type="submit">Submit</button>
+        </form>
+    <section id="social-links">
+        <a href="facebook.com"><i class="fa-brands fa-facebook"></i></a>
+        <a href="instagram.com"><i class="fa-brands fa-instagram"></i></a>
+        <a href="x.com"><i class="fa-brands fa-x"></i></a>
+        <a href="reddit.com"><i class="fa-brands fa-reddit"></i></a>
+    </section>
+ </main>
+ <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script> <!--URl provides the tools such that when the script is loaded, a global object(emailjs) is created --->
+ <script>
+    (function() {
+        emailjs.init("Y_x4EKALuADWU6avq");  //use public key to initialize EmailJs
+    }) ();
+ </script>
+<script src="contact.js"></script>
+</body>
+</html>

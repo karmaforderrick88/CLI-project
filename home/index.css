@@ -1,0 +1,95 @@
+/* General Styles */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: #1a1a1a;
+    color: white;
+}
+
+.logo { font-size: 24px; font-weight: bold; letter-spacing: 2px; }
+.logo span { color: #f39c12; } /* Accent color */
+
+.nav-links { list-style: none; display: flex; }
+.nav-links li { margin-left: 30px; }
+.nav-links a { text-decoration: none; color: white; transition: 0.3s; }
+.nav-links a:hover { color: #f39c12; }
+
+.hero {
+    position: relative; /* Anchor for the absolute canvas */
+    height: 70vh;
+    width: 100%;
+    background: #0a0a0b; /* Dark background so colors pop */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1036px;
+    height:824px;
+    z-index: 1; /* Lowest layer */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Sits on top of the canvas */
+    text-align: center;
+    color: white;
+    /* This makes sure you can still click buttons through the canvas */
+    pointer-events: none; 
+}
+
+.hero-content h1 { font-size: 3.5rem; margin-bottom: 20px; }
+.hero-content p { font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; }
+
+/* Buttons */
+.btn-primary, .btn-secondary {
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 10px;
+    display: inline-block;
+}
+
+.btn-primary { background: #f39c12; color: #1a1a1a; }
+.btn-secondary { border: 2px solid white; color: white; }
+.btn-primary:hover { background: #e67e22; }
+.btn-secondary:hover{ color:#e67e22}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 10%;
+    background:#444444;
+    text-align: center;
+    color: white;
+}
+.feature-card { flex: 1; padding: 20px; }
+.feature-card .icon { font-size: 40px; margin-bottom: 15px; }
+
+/* Team Teaser */
+.team-teaser { padding: 80px 10%; text-align: center; }
+.team-teaser h2 { margin-bottom: 40px; font-size: 2.5rem; }
+.team-grid { display: flex; justify-content: center; gap: 50px; }
+.director-link img { border-radius: 50%; width: 150px; margin-bottom: 15px; border: 3px solid #f39c12; }
+.director-link a { color: #f39c12; text-decoration: none; font-weight: bold; }
+
+/* Footer */
+.site-footer {
+    background: #1a1a1a;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-top: 5px solid #f39c12;
+}

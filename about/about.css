@@ -1,0 +1,99 @@
+header {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+    padding: 80px 15% 100px 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+header p {
+    max-width: 750px;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #5d6d7e;
+    margin-bottom: 40px;
+}
+
+header h2 {
+    color: #f39c12;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    position: relative;
+}
+header h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background-color: #f39c12;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+.members-container{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(50%,1fr));
+    background-color: aliceblue;
+    gap: 5px;
+}
+.member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;   
+    border: 1px solid #f39c12;
+    border-radius: 12px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    background-color: #ffffff;
+    padding: 24px;
+    transition: transform 0.2s ease; 
+}
+.member-card:hover {
+    transform: translateY(-5px);
+}
+.member-card h3 {
+    margin: 0 0 8px 0;
+    color: #2c3e50;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+}
+.member-role {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #f39c12; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+.member-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+}
+.member-image-card {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #f39c12;
+}
+.member-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
