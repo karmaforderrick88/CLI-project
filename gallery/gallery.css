@@ -1,6 +1,6 @@
 #product-container{
     display: grid;
-    grid-template-columns: repeat(3,minmax(200px,200px));
+    grid-template-columns: repeat(10,minmax(200px,200px));
     gap:16px;
     padding:20px;
     border:5px solid #f39c12;

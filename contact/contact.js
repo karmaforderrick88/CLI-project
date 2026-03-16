@@ -2,7 +2,8 @@ document.getElementById("contact-form").addEventListener("submit", function(e){
     e.preventDefault(); //prevents page from refreshing
 
     //Select the submit button
-    const submitBtn = this.querySelector("button"[type= 'submit']);
+    const submitBtn = this.querySelector("button[type= 'submit']"
+    );
 
     //Change text while sending 
     submitBtn.innerText = "Sending..";
