@@ -4,42 +4,258 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Email us</title>
-    <link rel="stylesheet" href="contact/contact.css">
+    <!-- <link rel="stylesheet" href="contact.css"> -->
     <link rel="stylesheet" href="../index.css">
     <script src="https://kit.fontawesome.com/4822a6e79c.js" crossorigin="anonymous"></script>
+    <style>
+        /* Override styles for contact page */
+        body {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);
+            min-height: 100vh;
+        }
+        
+        .navbar {
+            position: relative;
+            z-index: 100;
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        #form-body {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 450px;
+            padding: 40px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(243, 156, 18, 0.2);
+        }
+        
+        #contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        #contact-form label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: -10px;
+        }
+        
+        #contact-form input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        #contact-form input:focus {
+            border-color: #f39c12;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.1);
+        }
+        
+        #txtarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            resize: vertical;
+            min-height: 120px;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        
+        #txtarea:focus {
+            border-color: #f39c12;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.1);
+        }
+        
+        #submitbtn {
+            width: 100%;
+            padding: 14px;
+            background: #f39c12;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        #submitbtn:hover {
+            background: #e67e22;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
+        }
+        
+        #submitbtn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        #social-links {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        #social-links a {
+            color: #f39c12;
+            font-size: 1.8rem;
+            transition: all 0.3s ease;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(243, 156, 18, 0.1);
+            border-radius: 50%;
+        }
+        
+        #social-links a:hover {
+            color: white;
+            background: #f39c12;
+            transform: translateY(-3px);
+        }
+        
+        /* Remove old contact.css styles */
+        #form-body, #contact-form, #txtarea, #submitbtn, #social-links {
+            all: unset;
+        }
+        
+        /* Reapply our new styles */
+        #form-body {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 450px;
+            padding: 40px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(243, 156, 18, 0.2);
+        }
+        
+        #contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        #contact-form label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        #contact-form input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+        
+        #txtarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            min-height: 120px;
+        }
+        
+        #submitbtn {
+            width: 100%;
+            padding: 14px;
+            background: #f39c12;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        #social-links {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            #form-body {
+                width: 95%;
+                padding: 30px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
-    <div class="logo">FINE<span>TECH</span></div>
-   <ul class="nav-links">
-    <li><a href="/index.html">Home</a></li>
-    <li><a href="/gallery/gallery.html">Gallery</a></li>
-    <li><a href="/about/about.html">About Us</a></li>
-    <li><a href="contact.html">Contact</a></li>
-</ul>
-</nav>
+        <div class="logo">FINE<span>TECH</span></div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../gallery/gallery.html">Gallery</a></li>
+            <li><a href="../about/about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
     <main id="form-body">
         <form id="contact-form">
             <label for="name">Enter your name:</label>
-            <input name="name" class="form-input">
+            <input name="name" class="form-input" id="name" required>
+            
             <label for="email">Enter your email:</label>
-            <input type="email" class="form-input" name="email">
-            <textarea id="txtarea" name="message" rows="6" placeholder="Your message"></textarea>
-            <button id="submitbtn" type="submit">Submit</button>
+            <input type="email" class="form-input" name="email" id="email" required>
+            
+            <label for="message">Your message:</label>
+            <textarea id="txtarea" name="message" placeholder="How can we help you?" required></textarea>
+            
+            <button id="submitbtn" type="submit">Send Message</button>
         </form>
-    <section id="social-links">
-        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://x.com"><i class="fa-brands fa-x"></i></a>
-        <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
-    </section>
- </main>
- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script> <!--URl provides the tools such that when the script is loaded, a global object(emailjs) is created --->
- <script>
-    (function() {
-        emailjs.init("Y_x4EKALuADWU6avq");  //use public key to initialize EmailJs
-    }) ();
- </script>
-<script src="contact.js"></script>
+        
+        <section id="social-links">
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+        </section>
+    </main>
+    
+    <footer class="site-footer" style="position: fixed; bottom: 0; width: 100%;">
+        <p>&copy; 2026 FineTech. All rights reserved.</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("Y_x4EKALuADWU6avq");
+        })();
+    </script>
+    <script src="contact.js"></script>
 </body>
 </html>
