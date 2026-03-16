@@ -18,12 +18,6 @@ const memberInfo = [// holds info for each member
     imageUrl:'pics/dennis.png'
     },
     {
-    Name:'Faith Muchai',
-    role:'Project Manager',
-    description:'With a strong background in software project management, Faith ensures that the development process is efficient, timelines are met, and communication between teams is seamless.',
-    imageUrl:'pics/faith.jpg'
-    },
-    {
     Name:'Nancy Mwara',
     role:'QA Engineer',
     description:'Nancy is responsible for testing the web application to ensure that all features work correctly and that the transition from VB.NET does not introduce any bugs or issues.',
