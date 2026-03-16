@@ -1,15 +1,6 @@
 services:
   - type: web
     name: finetech
-    runtime: static
-    repo: https://github.com/karmaforderrick88/CLI-project
-    buildCommand: echo "Static site, no build required"
-    staticPublishPath: ./
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
-    headers:
-      - path: /*
-        name: Cache-Control
-        value: no-cache
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start

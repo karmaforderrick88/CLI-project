@@ -5,138 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About us</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <!-- <link rel="stylesheet" href="about.css"> -->
-    <link rel="stylesheet" href="../index.css">
-    <style>
-        /* Override styles for about page */
-        .navbar {
-            position: relative;
-            z-index: 100;
-        }
-        
-        body {
-            background-color: #f5f5f5;
-        }
-        
-        .members-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            padding: 40px 10%;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        .member-card {
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        
-        .member-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .member-image-card {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 4px solid #f39c12;
-            margin-bottom: 20px;
-        }
-        
-        .member-photo {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .member-card h3 {
-            color: #2c3e50;
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-        
-        .member-role {
-            color: #f39c12;
-            font-weight: bold;
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-            display: inline-block;
-            background: rgba(243, 156, 18, 0.1);
-            padding: 5px 15px;
-            border-radius: 20px;
-        }
-        
-        .member-card p {
-            color: #666;
-            line-height: 1.6;
-            font-size: 0.95rem;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);
-            padding: 60px 10%;
-            text-align: center;
-            color: white;
-            margin-bottom: 40px;
-        }
-        
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-        
-        header .brand-highlight {
-            color: #f39c12;
-        }
-        
-        header p {
-            max-width: 800px;
-            margin: 0 auto 30px;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            opacity: 0.9;
-        }
-        
-        header h2 {
-            color: #f39c12;
-            font-size: 2rem;
-            position: relative;
-            display: inline-block;
-        }
-        
-        header h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: #f39c12;
-        }
-        
-        @media (max-width: 768px) {
-            .members-container {
-                grid-template-columns: 1fr;
-                padding: 20px;
-            }
-            
-            header h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../index.css">  
+    <link rel="stylesheet" href="about.css"> 
 </head>
 <body>
     <nav class="navbar">
@@ -162,10 +32,6 @@
     <main>
         <div class="members-container"></div>
     </main>
-    
-    <footer class="site-footer">
-        <p>&copy; 2026 FineTech. All rights reserved.</p>
-    </footer>
     
     <script src="about.js"></script>
 </body>
