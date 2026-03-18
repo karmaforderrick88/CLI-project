@@ -97,3 +97,13 @@ header h2::after {
     height: 100%;
     object-fit: cover; 
 }
+.portfolio-link {
+    color: #01025a;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+.portfolio-link:hover {
+    text-decoration: underline;
+    color:#e67e22;
+}
