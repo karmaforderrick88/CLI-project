@@ -27,6 +27,7 @@ header{
     justify-content: center;
     background: linear-gradient(to right,#444444 40%,#f39c12);
     color: antiquewhite;
+    margin-top: 70px;
 }
 header h1{font-size: 2.5rem;}
 header p{ font-size: 1.5rem;}
