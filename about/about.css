@@ -62,6 +62,7 @@ header h2::after {
 }
 .member-card:hover {
     transform: translateY(-5px);
+    box-shadow: #f39c12 5px 5px 15px 5px;
 }
 .member-card h3 {
     margin: 0 0 8px 0;
