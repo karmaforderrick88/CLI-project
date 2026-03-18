@@ -89,7 +89,7 @@ class Circle {
 }
 
 const circles = [];
-for (let i = 0; i < 50; i++) {
+for (let i = 0; i < 150; i++) {
     circles.push(new Circle());
 }
 

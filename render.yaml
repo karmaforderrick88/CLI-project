@@ -1,6 +1,10 @@
+
 services:
   - type: web
     name: finetech
     runtime: node
     buildCommand: npm install
     startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 18
