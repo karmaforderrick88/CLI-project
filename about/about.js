@@ -17,13 +17,15 @@ const memberInfo = [// holds info for each member
     Name:'Dennis Munene',
     role:'Full Stack Developer',
     description:'Skilled in both front-end and back-end development, Dennis is adept at integrating VB.NET functionalities into modern web applications using frameworks like React and Express.',
-    imageUrl:''
+    imageUrl:'pics/dennis.png',
+    portfolio:'../Dennis.html'
     },
     {
     Name:'Nancy Mwara',
     role:'QA Engineer',
     description:'Nancy is responsible for testing the web application to ensure that all features work correctly and that the transition from VB.NET does not introduce any bugs or issues.',
-    imageUrl:''
+    imageUrl:'pics/Nancy.jpeg',
+    portfolio:'../NancyProfile.html'
     }
 
 ]
